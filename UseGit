@@ -115,6 +115,6 @@
 			 禁用shell登录：编辑/etc/passwd（git:x:1001:1001:,,,:/home/git:/bin/bash  -->  git:x:1001:1001:,,,:/home/git:/usr/bin/git-shell）
 			 克隆远程仓库： git clone git@server:/srv/sample.git
 
-
+More in:   http://www.liaoxuefeng.com/wiki/0013739516305929606dd18361248578c67b8067c8c017b000
                                                 谢谢观看！Thanks!
 
