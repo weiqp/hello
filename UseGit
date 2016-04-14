@@ -59,7 +59,17 @@
 		                       （第一次）过程中输入yes,,以及前面设置过的密码。
 
 		刷新github.com就好啦！！
-
+		
+10.Clone(从远程库克隆)
+		
+		登陆GitHub，创建一个新的仓库，名字叫gitskills，，勾选Initialize this repository with a README
+                                                         |
+                                                         |
+                                      git clone git@github.com:(GitHub账户名)/gitskills.git
+                                                         |
+                      GitBash中输入，，cd gitskills便会发现该目录已存在，并且该目录下有文件README文件
+                      
+                
 
 
 
