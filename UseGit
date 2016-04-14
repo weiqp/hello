@@ -1,0 +1,67 @@
+               Git Command Manual(Git命令学习手册)
+1.install（安装）
+
+	  Linux:  sudo apt-get install git  
+	Windows:  访问”http://mysysgit.github.io/下载“，按默认选项进行安装即可。
+
+   安装完成后，运行Git Bash,输入命令行：
+   		git config --global user.name "Your name"
+		git config --global user.email "Your email"
+
+
+2.Create repository(创建仓库)
+
+		mkdir learhgit  (创建仓库learngit)
+		git init        (让git管理仓库)
+
+
+3.Submit file(提交文件)
+
+		vim readme.txt           (在learngit目录下创建文件read.txt并输入内容)
+		git add readme.txt       (添加文件到仓库)
+		git commit -m "文件描述"（提交文件到仓库）
+ 
+4.Time Shuttle（时光穿梭）
+
+		git status                  (查看仓库当前状态)
+		git diff                    (查看仓库的具体变化)
+		git log                    （查看文件更改日志）  -->  git log --pretty=oneline(单行显示)
+		git reset --hard 326626     (版本id号，可在git log输出信息中找到)  --> ...--hard HEAD^(指当前版本)
+		git reflog                  (记录历史命令（忘记版本ID时可用）)
+
+5.workspace(工作区与暂存区)
+		
+		工作区      ---->          暂存区       ---->      当前分支
+
+		readme.txt              git add....              git commit...
+
+6.Undoing(撤销修改)
+
+		git checkout -- readme.txt       (撤销对工作区文件的修改)
+		git reset HEAD readme.txt       （可以把暂存区的修改撤销掉（unstage），重新放回工作区）,再checkout.
+
+7.Delete file(删除文件)
+		
+		git rm file  -->  git commit -m file
+		gir checkout -- file (恢复）
+
+8.Remote Repository(远程库配置)
+
+		ssh -keygen -t rsa -C "youremail@example.com"(创建SSH KEY)
+
+		登录Github.com --> 账户设置页面 --->   SSH Keys”页面   --->  Add SSH Key  -->  填上任意Title，在Key文本框里粘贴id_rsa.pub文件的内容  --> Add key! Finished!!
+
+9.添加远程库
+		
+		登录Github.com --> Create a new repository(仓库),名字为learngit
+		本地Git Bash输入命令：git remote add origin git@github.com:（github账户名）/learngit.git   <--关联本地库
+		                      git push -u origin master                                            <--- 推送本地库到远程
+		                       （第一次）过程中输入yes,,以及前面设置过的密码。
+
+		刷新github.com就好啦！！
+
+
+
+
+
+
