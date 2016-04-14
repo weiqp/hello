@@ -69,6 +69,35 @@
                                                          |
                       GitBash中输入，，cd gitskills便会发现该目录已存在，并且该目录下有文件README文件
                       
+11.Branches(创建分支及解决分支冲突)
+		git checkout -b dev                     （创建并切换到dev分支）
+		git branch                              （查看当前分支）
+		git checkout master                     （切换回master分支）
+		git merge dev                           （合并dev和master分支）dev + master --> master
+		git branch -d dev                        (删除分支dev)（合并分支后）
+		git log --graph --pretty=oneline --abbrev-commit   (查看分支合并情况)
+		
+		git stash                                 （把当前工作现场“储藏”起来，等以后恢复现场后继续工作，修复Bug时常用）
+		git stash list                            （查看工作现场）
+		git stash pop                             （恢复工作现场并且删除stash内容）
+		
+		git branch -D <name>                      （丢弃一个没有被合并过的分支）
+		
+12.cooperation（多人协作）
+
+		git remote -v                             （查看远程库的信息）
+		git pull                                   （把最新的提交从分支上抓下来，然后，在本地合并，解决冲突，再推送）
+		git push origin branch-name 失败   --->   git pull失败   -->   git branch --set-upstream branch-name origin/branch-name        <-----多人协作的工作模式
+
+13.tag(标签、快照)
+
+		git tag v1.0                     (创建标签v1.0)
+		git tag                          (查看所有标签)
+		git show <tagname>                (查看某一标签信息)
+		git tag v0.9 6224937（commit id）
+                git tag -d v0.1                  （删除标签）
+                git push origin --tags            （一次性推送全部尚未推送到远程的本地标签）
+                
                 
 
 
